@@ -3,8 +3,11 @@ package com.ktp.p6_navigasi.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -17,6 +20,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
@@ -86,5 +90,13 @@ fun FormIsian(
             label = {Text(text = "Alamat")},
             onValueChange = {},
         )
+        Spacer(modifier = Modifier.padding(30.dp))
+        Button(
+            modifier = Modifier.fillMaxWidth(1f)
+                .padding(all = 25.dp),
+            onClick = OnSubmitBtnClick
+        ) {
+            Text(text = stringResource(R.string.submit))
+        }
     }
 }
