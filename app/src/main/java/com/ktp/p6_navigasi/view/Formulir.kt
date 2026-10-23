@@ -50,7 +50,7 @@ fun FormIsian(
                 modifier = Modifier
                     .padding(top = 20.dp)
                     .width(250.dp),
-                label = { Text(text = stringResource(R.string.nama_lengkap)) },
+                label = { Text(text = "Nama") },
                 onValueChange = {}
             )
             HorizontalDivider(
@@ -77,6 +77,14 @@ fun FormIsian(
                 .width(250.dp),
             thickness = 1.dp,
             color = Color.Red
+        )
+        OutlinedTextField(
+            value = "",
+            singleLine = true,
+            modifier = Modifier
+                .width(250.dp),
+            label = {Text(text = "Alamat")},
+            onValueChange = {},
         )
     }
 }
