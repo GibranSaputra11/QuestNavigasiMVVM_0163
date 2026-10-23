@@ -2,12 +2,14 @@ package com.ktp.p6_navigasi.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -51,6 +53,12 @@ fun FormIsian(
                 label = { Text(text = stringResource(R.string.nama_lengkap) },
                 onValueChange = {}
             )
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .width(250.dp), thickness = Thickness,  color = Color.Red
+            )
+
 
         }
 
